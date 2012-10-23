@@ -1,0 +1,1 @@
+all: retele_omega
