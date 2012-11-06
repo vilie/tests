@@ -1,3 +1,3 @@
-all: retele_omega
-clean: retele_omega
-	rm -rf retele_omega
+all: lab4
+clean: lab4
+	rm -rf lab4
