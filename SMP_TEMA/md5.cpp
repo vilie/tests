@@ -251,11 +251,13 @@ void MD5::update(const unsigned char input[], size_type length)
     #ifdef __mpi__
     MPI_Comm_size(MPI_COMM_WORLD, &numprocs);
     MPI_Comm_rank(MPI_COMM_WORLD, &myid);
+    MPI_Send(&offset, 1, MPI_INT, dest, tag1, MPI_COMM_WORLD);
     #endif
     for (i = firstpart; i + blocksize <= length; i += blocksize)
       transform(&input[i]);
     #ifdef __mpi__
     MPI_Finalize();
+    MPI_Recv(&offset, 1, MPI_INT, source, tag1, MPI_COMM_WORLD, &status);
     #endif
     index = 0;
   }
