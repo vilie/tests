@@ -1,7 +1,7 @@
 # EM
 
 alias s="ssh"
-alias r="rm"
+alias r="rm -r"
 alias t='top'
 alias h='htop'
 alias u='uname -a; w'
