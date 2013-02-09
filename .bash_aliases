@@ -10,6 +10,8 @@ alias e='exit'
 alias ex='exit'
 alias nv_on="echo ON > /sys/kernel/debug/vgaswitcheroo/switch"
 alias nv_of="echo OFF > /sys/kernel/debug/vgaswitcheroo/switch"
+alias hh='history'
+
 
 # p
 # Usage: p - ps;
@@ -24,7 +26,7 @@ function p() {
        then
            ping $1;
        else
-           ps aux | grep $1;
+           ps aux | head -1 && ps aux | grep $1;
        fi
     ;;
     *) echo "Undefined"
@@ -36,7 +38,12 @@ function p() {
 
 function c() {
 	case "$#" in
-	0) clear
+	0) 
+	if [[ `history | tail -2 | head -1 | awk '{ print $2 }'` = "c" ]]; then
+		cd;
+	else
+		clear;
+	fi
 	;;
 	1) if [[ -f $1 ]]; then
         cat $1;
