@@ -3,7 +3,6 @@
 alias s="ssh"
 alias r="rm -r"
 alias t='top'
-alias h='htop'
 alias u='uname -a; w'
 alias v='vim'
 alias e='exit'
@@ -12,6 +11,22 @@ alias nv_on="echo ON > /sys/kernel/debug/vgaswitcheroo/switch"
 alias nv_of="echo OFF > /sys/kernel/debug/vgaswitcheroo/switch"
 alias hh='history'
 
+
+#
+# Usage: h - htop
+# h <string> - history | grep string
+#
+
+function h() {
+    case "$#" in
+    0) htop
+    ;;
+    1) history | grep $1
+    ;;
+    *) echo "Undefined"
+    ;;
+    esac
+}
 
 # p
 # Usage: p - ps;
