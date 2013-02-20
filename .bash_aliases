@@ -54,7 +54,7 @@ function p() {
 function c() {
 	case "$#" in
 	0) 
-	if [[ `history | tail -2 | head -1 | awk '{ print $2 }'` = "c" ]]; then
+	if [[ `history | tail -2 | head -1 | awk '{ print $2 $3 }'` = "c" ]]; then
 		cd;
 	else
 		clear;
