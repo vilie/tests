@@ -10,7 +10,7 @@ alias ex='exit'
 alias nv_on="echo ON > /sys/kernel/debug/vgaswitcheroo/switch"
 alias nv_of="echo OFF > /sys/kernel/debug/vgaswitcheroo/switch"
 alias hh='history'
-
+alias ll='ls -alhF'
 
 #
 # Usage: h - htop
