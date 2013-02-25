@@ -60,7 +60,9 @@ function c() {
 		clear;
 	fi
 	;;
-	1) if [[ -f $1 ]]; then
+	1) if [[ $1 = "-" ]]; then
+        cd -; 
+       elif [[ -f $1 ]]; then
         cat $1;
 	   elif [[ -d $1 ]]; then
 		cd $1 && ls;
