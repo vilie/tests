@@ -1,0 +1,39 @@
+git status
+
+git branch tutorial
+
+git checkout tutorial
+
+git branch (pe care sunt)
+
+./script/checkpatch.pl --file --terse <file>
+
+git status
+
+git diff
+
+./script/getmantainer
+
+**************************
+
+git commit -a
+
+Kernel: dma.c: fixed coding style issues
+
+Fixed coding style issues. (checkpatch warnings)
+
+Signed-off-by: Valentin Ilie <valentin.ilie@gmail.com>
+
+***************************
+
+
+git format-patch master..tutorial
+
+
+**************************
+
+
+git send-email --to paul.gortmaker@windriver.com --to dhowells@redhat.com --cc linux-kernel@vger.kernel.org 0001-Kernel-dma.c-fixed-coding-style-issues.patch
+
+
+
