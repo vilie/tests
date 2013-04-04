@@ -11,11 +11,16 @@ alias nv_on="echo ON > /sys/kernel/debug/vgaswitcheroo/switch"
 alias nv_of="echo OFF > /sys/kernel/debug/vgaswitcheroo/switch"
 alias hh='history'
 alias ll='ls -alhF'
+#alias lh='ls -lh'
 alias c-='c -'
 alias c..='c ..'
 alias c...='c ..; c..'
 alias c....='c ...; c..'
 alias c.....='c ....; c..'
+# alias lh="ll | awk -F " " '{print $5 "\t" $9}'"
+# Add support to permalias
+# http://stackoverflow.com/questions/15235141/how-to-create-a-function-in-bashrc-that-will-work-correctly-when-the-command-ru
+#
 
 #
 # Usage: h - htop
