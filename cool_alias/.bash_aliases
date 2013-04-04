@@ -12,6 +12,10 @@ alias nv_of="echo OFF > /sys/kernel/debug/vgaswitcheroo/switch"
 alias hh='history'
 alias ll='ls -alhF'
 alias c-='c -'
+alias c..='c ..'
+alias c...='c ..; c..'
+alias c....='c ...; c..'
+alias c.....='c ....; c..'
 
 #
 # Usage: h - htop
