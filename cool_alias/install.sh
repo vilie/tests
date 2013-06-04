@@ -17,11 +17,16 @@ function install_root() {
     done
 }
 
+function activate() {
+    source ~/.bash_aliases
+}
+
 if [ `whoami` = "root" ]; then
     echo "INFO: I'm root. Installed for all users.";
     install_root
 else
 	echo "WARNING: I'm not root. Installing just for the local user!";
     install_user
+    activate
 fi;
 
