@@ -1,0 +1,26 @@
+on 1:START: {
+  .nick temp231qwe
+  .server hobana.freenode.net
+  .server -m bucharest.ro.eu.undernet.org
+}
+
+on 1:CONNECT: {
+  if ($network == freenode) {
+    .nick ivali
+    .msg NickServ identify classic
+    .join #rosedu
+    .join #android
+    .join #linux
+    .join #android-dev
+    .join #android-root
+    .join #haskell-ro
+  }
+  elseif ($network == undernet) {
+    .msg x@channels.undernet.org login em ^6ShDn.l$
+    .mode $me +x
+    .nick Valentin-
+    .join #CafeDelMar
+    .join #librarie
+  }
+}
+
