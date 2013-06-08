@@ -18,7 +18,7 @@ on 1:CONNECT: {
   elseif ($network == undernet) {
     .msg x@channels.undernet.org login em ^6ShDn.l$
     .mode $me +x
-    .nick Valentin-
+    .nick valentin-
     .join #CafeDelMar
     .join #librarie
   }
