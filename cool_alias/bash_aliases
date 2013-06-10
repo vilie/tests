@@ -1,7 +1,7 @@
 # EM
 
 alias s="ssh"
-alias r="rm -r"
+alias r="rm -rf"
 alias t='top'
 alias u='uname -a; w'
 alias v='vim'
