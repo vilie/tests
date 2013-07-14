@@ -24,6 +24,6 @@ on 1:CONNECT: {
   }
 }
 
-on 1:DISCONNET: {
+on 1:DISCONNECT: {
   .nick tmp231tmpd
 }
