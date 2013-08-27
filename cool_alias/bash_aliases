@@ -20,6 +20,7 @@ alias c.....='c ../../../../'
 alias c~='c ~'
 alias cx='chmod +x'
 alias glog='git log --pretty=format:"%h - %an, %ar : %s" --graph'
+alias gl="git log --graph --pretty=format:'%Cblue%h%Creset -%C(bold blue)%d%Creset %C(yellow)%s %Cred(%cr) %C(white)<%an>%Creset' --abbrev-commit"
 # alias lh="ll | awk -F " " '{print $5 "\t" $9}'"
 # Add support to permalias
 # http://stackoverflow.com/questions/15235141/how-to-create-a-function-in-bashrc-that-will-work-correctly-when-the-command-ru
