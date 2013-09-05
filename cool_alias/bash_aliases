@@ -27,6 +27,16 @@ alias gl="git log --graph --pretty=format:'%Cblue%h%Creset -%C(bold blue)%d%Cres
 #
 
 #
+# Usage exc - <file1> <file2>
+#
+
+function exc() {
+    mv $1 temp31337;
+    mv $2 $1;
+    mv temp31337 $2;
+}
+
+#
 # Usage: h - htop
 # h <string> - history | grep string
 #
