@@ -1,19 +1,20 @@
 on 1:START: {
-  .nick temp231qwe
+  .nick ivali $+ $rand(100,900)
   .server hobana.freenode.net 6667
 }
 
 on 1:CONNECT: {
-    .nick ivali
-    .msg NickServ identify classic
-    .join #rosedu
-    .join #android
-    .join #linux
-    .join #android-dev
-    .join #android-root
-    .join #haskell-ro
+  .nick ivali
+  .msg NickServ identify classic
+  .join #rosedu
+  .join #android
+  .join #linux
+  .join #android-dev
+  .join #android-root
+  .join #haskell-ro
+  .join #mptcp
 }
 
 on 1:DISCONNECT: {
-  .nick tmp231tmpd
+  .nick ivali $+ $rand(100,900)
 }
