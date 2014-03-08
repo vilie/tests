@@ -1,6 +1,6 @@
 on 1:START: {
   .nick ivali $+ $rand(100,900)
-  .server hobana.freenode.net 6667
+  .server eu.freenode.net 6667
 }
 
 on 1:CONNECT: {
