@@ -1,20 +1,22 @@
 on 1:START: {
-  .nick ivali $+ $rand(100,900)
-  .server eu.freenode.net 6667
+  .nick temp231qwe
+  .server eu.freenode.net
+  .server -me otcirc.jf.intel.com 6697
 }
 
 on 1:CONNECT: {
-  .nick ivali
-  .msg NickServ identify classic
-  .join #rosedu
-  .join #android
-  .join #linux
-  .join #android-dev
-  .join #android-root
-  .join #haskell-ro
-  .join #mptcp
-}
-
-on 1:DISCONNECT: {
-  .nick ivali $+ $rand(100,900)
+  if ($network == freenode) {
+    .nick ivali
+    .msg NickServ identify justloseit
+    .join #rosedu
+    .join #android
+    .join #linux
+    .join #android-dev
+    .join #android-root
+    .join #haskell-ro
+    .join #mptcp
+  }
+  if ($network == OTCIRC) {
+    .join #otcromania
+  }
 }
