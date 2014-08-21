@@ -28,6 +28,7 @@ alias gl="git log --graph --pretty=format:'%Cblue%h%Creset -%C(bold blue)%d%Cres
 alias gp="git pull --rebase"
 alias gdiff="git diff"
 alias gc="git clone"
+alias r1="shutdown -r 1"
 # Add support to permalias
 # http://stackoverflow.com/questions/15235141/how-to-create-a-function-in-bashrc-that-will-work-correctly-when-the-command-ru
 #
